@@ -1,0 +1,12 @@
+use("tuki_store")
+
+db.products.updateOne(
+    // query
+    {_id: ObjectId("65ee5a20588d78ed0bcbc9a2")}, 
+    // change => operators 
+    { 
+        $inc: {
+                price: 100
+        }
+    }
+)
