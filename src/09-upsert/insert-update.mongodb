@@ -1,0 +1,28 @@
+use("tuki_store")
+
+db.iot.insertOne({
+    sensor: "A001",
+    date: "2022-01-03",
+    readings: [1212]
+})
+
+
+// db.iot.updateOne({
+//     sensor: "A001",
+//     date: "2022-01-03",
+//     },{
+//         $pop: { 
+//             // $pop=> Removes the first or last item of an array
+//         readings: 1
+//         }
+// })
+
+
+db.iot.updateOne({
+    sensor: "A001",
+    date: "2022-01-03",
+}, {
+    $push: {
+        readings: 2323
+    }
+})

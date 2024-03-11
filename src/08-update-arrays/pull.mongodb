@@ -1,0 +1,20 @@
+use("tuki_store")
+
+// remove one element from array
+// db.inventory.updateMany({_id: 4}, {
+//     // $pull => removes all array elements that match a specified query
+//     $pull: { 
+//         tags: "book"
+//     }
+// })
+
+// remove others element from array
+db.inventory.updateMany({}, {
+    // $pull => removes all array elements that match a specified query
+    $pull: { 
+        tags: {
+            // $in => matches any of the values specified in an array 
+            $in: ["appliance", "school"] 
+        }
+    }
+})

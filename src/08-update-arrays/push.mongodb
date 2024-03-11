@@ -1,0 +1,8 @@
+use("tuki_store")
+
+db.inventory.updateOne({_id: 4}, {
+    // $push => adds an item to an array
+    $push: {
+        tags: "headphone"
+    }
+})
