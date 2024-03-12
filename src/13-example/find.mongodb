@@ -1,0 +1,3 @@
+use("tuki_store")
+
+db.iot.find()

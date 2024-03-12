@@ -1,0 +1,16 @@
+use("tuki_store")
+
+// Using $ne
+//db.inventory.find({ qty: { $ne: 20 } })
+
+// Using $ne
+db.inventory.updateMany(
+    // query - operators
+    { qty: { $ne: 20 } },
+    // update - operators
+    {
+        $inc: {
+            qty: 10
+        }
+    }
+)
