@@ -1,0 +1,2 @@
+use("tuki_store")
+db.inventory.find()
